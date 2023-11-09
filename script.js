@@ -338,12 +338,3 @@ lazyImgs.forEach(img => imgObserver.observe(img));
 // });
 //   section1.scrollIntoView({ behavior: 'smooth' });
 // });
-function sumDigPow(a, b) {
-  let ranges = Array.from({ length: b - a }, (num, i) => (i === 0 ? a : a + i));
-  return ranges.map(num =>
-    String(num)
-      .split('')
-      .reduce((acc, num, i) => acc + num ** (i + 1), 0)
-  );
-}
-console.log(sumDigPow(10, 100));
